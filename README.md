@@ -20,8 +20,7 @@
    - There are 55 skeleton features per pose that we make use of while segmentation. These features are of two types
      - Part Affinity fields(PAF) :  They are 2-channel vector field map for each skeleton (line that joins two joints). There are 19 skeletons defined in COCO dataset. Hence for each pose there are 38 channels of PAF features.
      - Confidence maps : Part confidence maps emphasize the importance of those regions around the body part key points (parts = joints). There are 17 joints defined in the COCO dataset Hence, there are 17 channels of part confidence maps.
- - ### SegModule 
+ - ### SegModule :
+   - SegModule is introduced to extend the image features after alignment and is based on the resolution of the aligned RoIs. 
 
-Download pretrained weights and resnet50 pytorch file from below link
-
-https://drive.google.com/file/d/1D9MWWRKiWHyFE6Pm7busmX26oXLYW_Jx/view?usp=sharing
+Download pretrained weights and resnet50 pytorch file from below link : https://drive.google.com/file/d/1D9MWWRKiWHyFE6Pm7busmX26oXLYW_Jx/view?usp=sharing
