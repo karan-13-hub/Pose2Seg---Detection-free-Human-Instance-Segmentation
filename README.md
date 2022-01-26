@@ -14,10 +14,8 @@
   - Estimate Affine Transformation Matrix : 
    - Find an affine transform that best fits each of the template poses.
    - Select the template pose with the best score.
-   - Finding affine transform: H_{2 x 3} is an affine transform for a 2D image. Find the matrix H as:-
-H* 2 x 3 = argmin H (|| H.P - P μ ||)
-Finding score for best fit:
-Score = exp( - || H*.P - P μ || )
+   - Finding affine transform: H(2x3) is an affine transform for a 2D image. Find the matrix H as, H*(2 x 3) = argmin_H(||H.P - P_μ||)
+   - Finding score for best fit: Score = exp(-||H*.P - P_μ||)
  - Skeleton Features
  - SegModule
 
