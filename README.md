@@ -16,8 +16,11 @@
    - Estimate Affine Transformation Matrix : 
      - Finding  best fit affine transform for each of the template poses: H(2x3) is an affine transform for a 2D image. Find the matrix H as, H*(2 x 3) = argmin_H(||H.P - P_μ||)
      - Selecting the template pose with the best score for best fit: Score = exp(-||H*.P - P_μ||)
- - Skeleton Features
- - SegModule
+ - ### Skeleton Features : There are 55 skeleton features per pose that we make use of while segmentation. These features are of
+two types
+   - Part Affinity fields(PAF) :  They are 2-channel vector field map for each skeleton (line that joins two joints). There are 19 skeletons defined in COCO dataset. Hence for each pose there are 38 channels of PAF features.
+   - Confidence maps : Part confidence maps emphasize the importance of those regions around the body part key points (parts = joints). There are 17 joints defined in the COCO dataset Hence, there are 17 channels of part confidence maps.
+ - ### SegModule 
 
 Download pretrained weights and resnet50 pytorch file from below link
 
